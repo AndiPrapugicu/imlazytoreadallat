@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa; /* Culoare fundal */
+  padding: 20px;
+  color: black; /* Culoare text */
+  font-family: "Poppins", Arial, sans-serif;
+  width: 75vw;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  opacity: 1; /* Navbar vizibil */
+  transition: opacity 0.3s ease-in-out; /* Tranziție lină */
+  margin-top: 20px;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-logo:hover {
+  color: black;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  margin-right: 35px;
+}
+
+.navbar-link:hover {
+  color: black; /* Culoare la hover */
+}
+
+.navbar.hidden {
+  opacity: 0; /* Ascunde navbar-ul */
+  pointer-events: none; /* Dezactivează interacțiunile */
+  transition: opacity 0.3s ease-in-out; /* Tranziție lină */
+}

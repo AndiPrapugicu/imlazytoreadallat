@@ -1,0 +1,532 @@
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100vw;
+  overflow-x: hidden; /* Elimină scroll-ul orizontal */
+  text-align: center;
+  border: 2px dashed #d1d5db; /* Linie punctată */
+  margin: 0 auto;
+}
+
+/* Titlu */
+.upload-container h2 {
+  font-size: 24px;
+  color: #374151; /* Gri închis */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Zona de drag-and-drop */
+.upload-container .drag-drop-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #d1d5db; /* Linie punctată */
+  border-radius: 12px;
+  background-color: #f9fafb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-container .drag-drop-area:hover {
+  background-color: #f3f4f6; /* Gri deschis */
+}
+
+.upload-container .drag-drop-area img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.upload-container .drag-drop-area p {
+  font-size: 14px;
+  color: black; /* Gri */
+  margin: 0;
+}
+
+.upload-container .drag-drop-area a {
+  color: #3b82f6; /* Albastru */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Input ascuns */
+.upload-container input[type="file"] {
+  display: none;
+}
+
+/* Buton */
+.upload-container button {
+  background-color: #3a1078; /* Culoare accent */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.upload-container button:hover {
+  background-color: #320e69; /* Culoare accent mai închisă */
+}
+
+/* Mesaj de status */
+.upload-container p {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #3a1078;
+}
+
+/* Conținut fișier */
+.file-content {
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  max-height: 350px;
+  width: 100%; /* Asigură-te că ocupă întreaga lățime a containerului */
+  overflow-y: auto; /* Scroll doar pe verticală */
+  font-size: 14px;
+  color: #374151;
+  text-align: left;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  /* Proprietăți pentru a împărți textul pe mai multe rânduri */
+  word-wrap: break-word; /* Împarte cuvintele lungi */
+  word-break: break-word; /* Rupe cuvintele lungi */
+  white-space: pre-wrap; /* Păstrează spațiile și liniile noi */
+}
+
+/* Audio player */
+.audio-container {
+  margin-top: 20px;
+}
+
+.audio-container audio {
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+}
+
+.text-display {
+  background-color: #f9fafb;
+  color: #374151; /* Gri închis */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  max-height: 300px;
+  overflow-y: auto; /* Scroll doar pe verticală */
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap; /* Păstrează spațiile și liniile noi */
+  word-wrap: break-word; /* Împarte cuvintele lungi */
+  word-break: break-word; /* Rupe cuvintele lungi */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Pagina de upload */
+.upload-page {
+  display: flex;
+  justify-content: center; /* Centrează pe orizontală */
+  align-items: center; /* Centrează pe verticală */
+  min-height: 100vh; /* Ocupă întreaga înălțime a paginii */
+  /* background-color: #1d0427; */
+}
+
+.upload-content {
+  text-align: center; /* Aliniază textul la centru */
+  max-width: 75vw;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.upload-content h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.upload-content p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* Stilizare pentru select box */
+.styled-select {
+  background-color: #3a1078;
+  color: #ffffff;
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.styled-select:hover {
+  background-color: #320e69;
+}
+
+.styled-select option {
+  background-color: #1d0427;
+  color: #ffffff;
+}
+
+/* Controale volum */
+.volume-controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.volume-controls label {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.volume-controls input[type="range"] {
+  width: 100%;
+  appearance: none;
+  background: #6a0dad;
+  height: 5px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.volume-controls input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-controls input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Controale volum */
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spațiu între iconiță și slider */
+}
+
+.volume-icon {
+  color: #3a1078; /* Culoarea iconiței */
+  font-size: 20px; /* Dimensiunea iconiței */
+}
+
+.volume-bar {
+  appearance: none;
+  width: 100px;
+  height: 5px;
+  background: #6a0dad;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.volume-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-bar::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Bara de progres */
+.progress-bar-container {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #f3f4f6; /* Gri deschis */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #d1d5db; /* Gri */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #6a0dad; /* Mov */
+  transition: width 0.1s linear; /* Tranziție mai fluidă */
+}
+
+/* Controale audio personalizate */
+.custom-audio-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.custom-audio-controls button {
+  background-color: #6a0dad;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-audio-controls button:hover {
+  background-color: #4b0082;
+}
+
+.custom-audio-controls input[type="range"] {
+  width: 100%;
+  max-width: 400px;
+  appearance: none;
+  background: #6a0dad;
+  height: 5px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-audio-controls input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-audio-controls input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Player audio */
+.audio-player {
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  color: black;
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.play-pause-btn {
+  background-color: #ffffff !important;
+  color: #6a0dad !important;
+  border: 1px solid #6a0dad !important;
+  border-radius: 50% !important; /* Creează forma rotundă */
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0px !important;
+}
+
+.play-pause-btn:hover {
+  background-color: #4b0082;
+}
+
+.progress-bar {
+  appearance: none;
+  width: 100%;
+  max-width: 300px;
+  height: 5px;
+  background: #6a0dad;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 0px !important;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-bar {
+  appearance: none;
+  width: 100px;
+  height: 5px;
+  background: #6a0dad;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.volume-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.time-display {
+  font-size: 14px;
+  min-width: 40px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .upload-container {
+    max-width: 90%; /* Ocupă 90% din lățimea ecranului */
+    padding: 20px; /* Reducem padding-ul */
+  }
+
+  .file-content {
+    max-height: 250px; /* Reducem înălțimea maximă */
+    font-size: 13px; /* Reducem dimensiunea fontului */
+  }
+
+  .audio-player {
+    max-width: 90%; /* Ocupă 90% din lățimea ecranului */
+    padding: 15px; /* Reducem padding-ul */
+  }
+
+  .audio-controls {
+    flex-direction: column; /* Elemente pe verticală */
+    gap: 10px; /* Spațiu între elemente */
+  }
+
+  .play-pause-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .progress-bar {
+    max-width: 250px; /* Reducem lățimea barei de progres */
+  }
+
+  .volume-bar {
+    width: 80px; /* Reducem lățimea barei de volum */
+  }
+}
+
+/* Media query pentru telefoane (dimensiuni sub 768px) */
+@media (max-width: 768px) {
+  .upload-container {
+    width: 90%; /* ocupă 90% din lățime */
+    max-width: 600px; /* dar nu mai mult de 600px */
+    /* padding: 0 0 !important; */
+    margin: 0 0 !important;
+  }
+
+  .upload-content {
+    padding: 0 0 !important;
+    margin: 90px 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centru orizontal */
+    align-items: center; /* centru vertical */
+  }
+
+  .file-content {
+    max-height: 200px; /* Reducem înălțimea maximă */
+    font-size: 12px; /* Reducem dimensiunea fontului */
+  }
+
+  .audio-player {
+    max-width: 100%; /* Ocupă întreaga lățime a ecranului */
+    padding: 10px; /* Reducem padding-ul */
+  }
+
+  .audio-controls {
+    flex-direction: column; /* Elemente pe verticală */
+    gap: 8px; /* Spațiu între elemente */
+  }
+
+  .play-pause-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .progress-bar {
+    max-width: 200px; /* Reducem lățimea barei de progres */
+  }
+
+  .volume-bar {
+    width: 70px; /* Reducem lățimea barei de volum */
+  }
+
+  .styled-select {
+    font-size: 14px; /* Reducem dimensiunea fontului */
+    padding: 8px; /* Reducem padding-ul */
+  }
+
+  h2 {
+    font-size: 20px; /* Reducem dimensiunea titlului */
+  }
+
+  button {
+    font-size: 14px; /* Reducem dimensiunea fontului butoanelor */
+    padding: 10px 15px; /* Reducem padding-ul */
+  }
+}

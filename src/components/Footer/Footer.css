@@ -1,0 +1,96 @@
+.footer-container {
+  background-color: #1d0427;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100vw;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 1.8rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  margin: 5px 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-links h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  color: #6a0dad;
+}
+
+.footer-apps h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.app-buttons button {
+  background-color: #6a0dad;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.app-buttons button:hover {
+  background-color: #4b0082;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 0.8rem;
+  color: #d1d5db;
+}
+
+.footer-logo {
+  margin-left: 100px;
+  text-align: left;
+}
+
+.footer-apps {
+  margin-right: 100px;
+}

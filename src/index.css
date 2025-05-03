@@ -1,0 +1,350 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0a080a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #0b000b;
+  font-family: "Poppins", Arial, sans-serif;
+  overflow-x: hidden;
+  font-size: 16px; /* Dimensiune font pentru ecrane mari */
+}
+
+/* Stiluri generale pentru ecrane mari */
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Media query pentru tablete (dimensiuni între 768px și 1024px) */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px; /* Reducem dimensiunea fontului */
+  }
+
+  h1 {
+    font-size: 2.5em; /* Reducem dimensiunea titlurilor */
+  }
+
+  .home-container {
+    width: 100vw;
+    padding: 0 0 !important;
+    margin: 210px auto !important;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 30px 0px !important;
+    margin: 170px 0 !important;
+  }
+
+  .footer-container {
+    width: 100vw;
+    margin: 0 auto !important;
+    padding: 0 0 !important;
+  }
+
+  .upload-container,
+  .summary-container,
+  .product-container,
+  .reviews-container,
+  .use-case-container {
+    max-width: 90%; /* Ocupă 90% din lățimea ecranului */
+    padding: 20px; /* Reducem padding-ul */
+  }
+
+  .audio-player {
+    max-width: 90%; /* Ocupă 90% din lățimea ecranului */
+    padding: 15px; /* Reducem padding-ul */
+  }
+
+  .audio-controls {
+    flex-direction: column; /* Elemente pe verticală */
+    gap: 10px; /* Spațiu între elemente */
+  }
+
+  .play-pause-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .progress-bar {
+    max-width: 250px; /* Reducem lățimea barei de progres */
+  }
+
+  .volume-bar {
+    width: 80px; /* Reducem lățimea barei de volum */
+  }
+
+  button {
+    font-size: 14px; /* Reducem dimensiunea fontului butoanelor */
+    padding: 10px 15px; /* Reducem padding-ul */
+  }
+
+  .navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #1a1a1a;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .product-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .feature-card,
+  .feature-card-large {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    color: #ffffff;
+  }
+
+  .footer-content a {
+    font-size: 16px;
+    color: #646cff;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+  .product-container .product-features {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    width: 100%;
+    /* padding: 0px; */
+    /* margin: 0 auto; */
+    justify-items: center !important;
+    margin: 0 auto !important;
+    padding: 0 0 !important;
+  }
+}
+
+/* Media query pentru telefoane (dimensiuni sub 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Reducem dimensiunea fontului */
+  }
+
+  h1 {
+    font-size: 2em; /* Reducem dimensiunea titlurilor */
+  }
+
+  .home-container {
+    width: 100vw;
+    padding: 0 0 !important;
+    margin: 210px auto !important;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 30px 0px !important;
+    margin: 170px 0 !important;
+  }
+
+  .upload-container,
+  .summary-container,
+  .product-container,
+  .reviews-container,
+  .use-case-container {
+    max-width: 100%; /* Ocupă întreaga lățime a ecranului */
+    padding: 15px; /* Reducem padding-ul */
+  }
+
+  .file-content {
+    max-height: 200px; /* Reducem înălțimea maximă */
+    font-size: 12px; /* Reducem dimensiunea fontului */
+  }
+
+  .audio-player {
+    max-width: 100%; /* Ocupă întreaga lățime a ecranului */
+    padding: 10px; /* Reducem padding-ul */
+  }
+
+  .audio-controls {
+    flex-direction: column; /* Elemente pe verticală */
+    gap: 8px; /* Spațiu între elemente */
+  }
+
+  .play-pause-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .progress-bar {
+    max-width: 200px; /* Reducem lățimea barei de progres */
+  }
+
+  .volume-bar {
+    width: 70px; /* Reducem lățimea barei de volum */
+  }
+
+  .styled-select {
+    font-size: 14px; /* Reducem dimensiunea fontului */
+    padding: 8px; /* Reducem padding-ul */
+  }
+
+  button {
+    font-size: 12px; /* Reducem dimensiunea fontului butoanelor */
+    padding: 8px 12px; /* Reducem padding-ul */
+  }
+
+  .feature-card,
+  .review-card,
+  .use-case-card {
+    max-width: 100%; /* Ocupă întreaga lățime */
+    margin: 10px auto; /* Centrează cardurile */
+  }
+
+  .feature-card img,
+  .review-image img {
+    width: 100%; /* Ajustăm imaginile */
+    height: auto;
+  }
+
+  .navbar {
+    width: 100vw; /* Ocupă întreaga lățime */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .navbar a {
+    font-size: 14px; /* Dimensiune mai mică pentru link-uri */
+    text-decoration: none;
+  }
+
+  .product-container .product-features {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    width: 100%;
+    /* padding: 0px; */
+    /* margin: 0 auto; */
+    justify-items: center !important;
+    margin: 0 auto !important;
+    padding: 0 0 !important;
+  }
+
+  .feature-card,
+  .feature-card-large {
+    width: 100%; /* Ocupă întreaga lățime */
+    max-width: 300px; /* Dimensiune maximă */
+    margin-bottom: 15px; /* Spațiu între carduri */
+    padding: 15px;
+    background-color: #1a1a1a; /* Fundal consistent */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-card img,
+  .feature-card-large img {
+    width: 100%; /* Ajustăm imaginile */
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .footer-container {
+    width: 100vw;
+    margin: 0 auto !important;
+    padding: 0 0 !important;
+  }
+
+  .button-group {
+    margin: 0 auto !important;
+    padding: 0 0 !important;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column; /* Elemente pe verticală */
+    align-items: center; /* Centrează conținutul */
+    text-align: center; /* Text centrat */
+    padding: 20px;
+    color: #ffffff;
+  }
+
+  .footer-content a {
+    font-size: 14px; /* Dimensiune mai mică pentru link-uri */
+    color: #646cff;
+    text-decoration: none;
+    margin: 5px 0; /* Spațiu între link-uri */
+  }
+}
