@@ -10,8 +10,8 @@ const UploadForm: React.FC = () => {
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [backgroundType, setBackgroundType] = useState<"lofi" | "rap">("lofi");
   const [language, setLanguage] = useState<string>("en");
-  const [musicVolume, setMusicVolume] = useState<number>(0.5);
-  const [voiceVolume, setVoiceVolume] = useState<number>(1);
+  // const [musicVolume, setMusicVolume] = useState<number>(0.5);
+  // const [voiceVolume, setVoiceVolume] = useState<number>(1);
   const [progress, setProgress] = useState<number>(0); // Progresul generării audio
   const [isPlaying, setIsPlaying] = useState<boolean>(false); // Starea audio
   const [audioProgress, setAudioProgress] = useState<number>(0); // Progresul audio
