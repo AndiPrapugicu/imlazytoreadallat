@@ -53,7 +53,7 @@ p {
 }
 
 .button-group button:hover {
-  background-color: #4b0082; /* Mov mai închis */
+  background-color:rgba(106, 30, 85, 0.75); /* Mov mai închis */
   transform: scale(1.05); /* Efect de mărire la hover */
   color: #ffffff;
 }
