@@ -20,7 +20,7 @@
 }
 
 .product-header .highlight {
-  color: #A64D79;
+  color: #a64d79;
 }
 
 .product-header p {
@@ -63,7 +63,7 @@
 .feature-card.large h3 {
   font-size: 1.5rem;
   margin: 1rem;
-  color: #A64D79;
+  color: #a64d79;
   text-align: left;
 }
 .feature-card.large p {
@@ -74,7 +74,7 @@
   text-align: left;
 }
 .feature-card.large .learn-more {
-  background-color: #6A1E55;
+  background-color: #6a1e55;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -85,7 +85,7 @@
   align-self: flex-start;
 }
 .feature-card.large .learn-more:hover {
-  background-color:rgba(106, 30, 85, 0.75);
+  background-color: rgba(106, 30, 85, 0.75);
 }
 
 /* Carduri mici: layout grid pentru a stivui titlu, text, buton */
@@ -121,7 +121,7 @@
   grid-row: 1;
   margin: 1rem;
   font-size: 1.5rem;
-  color: #A64D79;
+  color: #a64d79;
 }
 
 /* Descriere sub titlu */
@@ -138,7 +138,7 @@
   grid-column: 2;
   grid-row: 3;
   margin: 1rem;
-  background-color: #6A1E55;
+  background-color: #6a1e55;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -150,5 +150,5 @@
   transition: background-color 0.3s ease;
 }
 .feature-card:not(.large) .learn-more:hover {
-  background-color: #6A1E55;
+  background-color: #6a1e55;
 }
