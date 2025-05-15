@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #1d0427;
+  background-color: #3B1C32;
   color: #ffffff;
   padding: 40px 20px;
   text-align: center;
@@ -16,7 +16,7 @@
 
 .footer-logo h2 {
   font-size: 1.8rem;
-  color: #6a0dad;
+  color: #A64D79;
   margin-bottom: 10px;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .app-buttons button {
-  background-color: #6a0dad;
+  background-color: #6A1E55;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -76,7 +76,7 @@
 }
 
 .app-buttons button:hover {
-  background-color: #4b0082;
+  background-color:rgba(106, 30, 85, 0.75);
 }
 
 .footer-bottom {

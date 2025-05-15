@@ -12,7 +12,7 @@
 }
 
 .reviews-header .highlight {
-  color: #6a0dad;
+  color: #A64D79;
 }
 
 .reviews-header p {
@@ -23,7 +23,7 @@
 }
 
 .read-all-button {
-  background-color: #6a0dad;
+  background-color: #6A1E55;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -34,7 +34,7 @@
 }
 
 .read-all-button:hover {
-  background-color: #4b0082;
+  background-color:rgba(106, 30, 85, 0.75);
 }
 
 .reviews-grid {
@@ -46,7 +46,7 @@
 }
 
 .review-card {
-  background-color: #1d0427;
+  background-color: #3B1C32;
   border-radius: 12px;
   padding: 20px;
   text-align: left;
@@ -71,7 +71,7 @@
 
 .review-text .role {
   font-size: 0.9rem;
-  color: #6a0dad;
+  color: #A64D79;
 }
 
 .review-image img {

@@ -35,7 +35,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #0b000b;
+  background-color: #1A1A1D;
   font-family: "Poppins", Arial, sans-serif;
   overflow-x: hidden;
   font-size: 16px; /* Dimensiune font pentru ecrane mari */
@@ -163,7 +163,7 @@ button:focus-visible {
     max-width: 400px;
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #1a1a1a;
+    background-color: #3B1C32;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -309,7 +309,7 @@ button:focus-visible {
     max-width: 300px; /* Dimensiune maximă */
     margin-bottom: 15px; /* Spațiu între carduri */
     padding: 15px;
-    background-color: #1a1a1a; /* Fundal consistent */
+    background-color: #3B1C32; /* Fundal consistent */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
