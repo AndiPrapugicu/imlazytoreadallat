@@ -24,13 +24,9 @@ const Summary: React.FC = () => {
     formData.append("file", file);
 
     try {
-      const response = await axios.post(
-        "http://localhost:5001/summarize",
-        formData,
-        {
-          headers: { "Content-Type": "multipart/form-data" },
-        }
-      );
+      const response = await axios.post("/api/summarize", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
 
       setSummary(response.data.summary);
 
