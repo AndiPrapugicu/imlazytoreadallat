@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://imlazytoreadallat-backend.onrender.com/", // Backend-ul NestJS
+        target: "https://imlazytoreadallat-backend.onrender.com", // Backend-ul NestJS
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
