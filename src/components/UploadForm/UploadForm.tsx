@@ -36,13 +36,13 @@ const UploadForm: React.FC = () => {
 
     try {
       setUploadStatus("Se încarcă fișierul...");
-      const uploadRes = await axios.post("/api/file/upload", formData, {
+      const uploadRes = await axios.post("/file/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
       setUploadStatus("Fișier încărcat cu succes!");
 
-      const contentRes = await axios.get("/api/file/content", {
+      const contentRes = await axios.get("/file/content", {
         params: { path: uploadRes.data.path },
       });
       setFileContent(contentRes.data.content);
@@ -72,7 +72,7 @@ const UploadForm: React.FC = () => {
       }, 100);
 
       // Așteptăm finalizarea generării audio
-      const ttsRes = await axios.post("/api/tts/generate", {
+      const ttsRes = await axios.post("/tts/generate", {
         text: fileContent,
         backgroundType,
         language,
