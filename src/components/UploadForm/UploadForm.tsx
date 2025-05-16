@@ -3,6 +3,8 @@ import axios from "axios";
 import { FaPlay, FaPause, FaVolumeUp } from "react-icons/fa"; // Importăm iconițele
 import "./UploadForm.css";
 
+const API_URL = "https://imlazytoreadallat-backend.onrender.com";
+
 const UploadForm: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [uploadStatus, setUploadStatus] = useState<string>("");
@@ -36,13 +38,13 @@ const UploadForm: React.FC = () => {
 
     try {
       setUploadStatus("Se încarcă fișierul...");
-      const uploadRes = await axios.post("/file/upload", formData, {
+      const uploadRes = await axios.post(`${API_URL}/file/upload`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
       setUploadStatus("Fișier încărcat cu succes!");
 
-      const contentRes = await axios.get("/file/content", {
+      const contentRes = await axios.get(`${API_URL}/file/content`, {
         params: { path: uploadRes.data.path },
       });
       setFileContent(contentRes.data.content);
@@ -72,7 +74,7 @@ const UploadForm: React.FC = () => {
       }, 100);
 
       // Așteptăm finalizarea generării audio
-      const ttsRes = await axios.post("/tts/generate", {
+      const ttsRes = await axios.post(`${API_URL}/tts/generate`, {
         text: fileContent,
         backgroundType,
         language,
