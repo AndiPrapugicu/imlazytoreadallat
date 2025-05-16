@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Summary.css";
 
 const Summary: React.FC = () => {
-  const API_URL = "https://llama-server-py.onrender.com";
+  const API_URL = "https://imlazytoreadallat-backend.onrender.com";
 
   const [file, setFile] = useState<File | null>(null);
   const [summary, setSummary] = useState<string | null>(null);
