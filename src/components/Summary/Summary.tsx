@@ -3,6 +3,8 @@ import axios from "axios";
 import "./Summary.css";
 
 const Summary: React.FC = () => {
+  const API_URL = "https://llama-server-py.onrender.com";
+
   const [file, setFile] = useState<File | null>(null);
   const [summary, setSummary] = useState<string | null>(null);
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
@@ -20,13 +22,17 @@ const Summary: React.FC = () => {
       return;
     }
 
-    const formData = new FormData();
-    formData.append("file", file);
+    // Citește textul din fișier
+    const text = await file.text();
 
     try {
-      const response = await axios.post("/api/summarize", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.post(
+        `${API_URL}/summarize`,
+        { text },
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
       setSummary(response.data.summary);
 
