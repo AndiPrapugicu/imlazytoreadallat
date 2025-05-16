@@ -16,7 +16,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api\/file/, "/file"),
       },
       "/api/summarize": {
-        target: "https://llama-server-py.onrender.com",
+        target: "https://imlazytoreadallat-backend.onrender.com",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/summarize/, "/summarize"),
       },
